@@ -1,0 +1,113 @@
+<div class="wrapper"  >
+  <div class="content shadow-sm" >
+     
+
+      <!-- Main container starts -->
+      <div class="container main-container" id="main-container" >
+          <div class="jumbotron px-4 py-5 text-white rounded position-relative overflow-hidden mb-4 template-bg" >
+             
+ 
+
+
+
+
+<div *ngIf="redirectUri.x!=false; then thenBlock else elseBlock"></div>
+
+
+
+  <ng-template #thenBlock>
+
+    <div *ngFor="let redirectUri of redirectUri">
+<br>
+<form (ngSubmit)="processForm()">
+  
+  <label class="sr-only" for="inlineFormInputName2">id</label>
+  <input type="text"  disabled name="id" value="{{redirectUri.id}}"  [(ngModel)]="redirectUri.id" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+
+  <label class="sr-only" for="inlineFormInputName2">Name</label>
+  <input type="text" name="redirectUri" value="{{redirectUri.redirectUri}}" [(ngModel)]="redirectUri.redirectUri"  class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+
+  <label class="sr-only" for="inlineFormInputGroupUsername2">clientID</label>
+  <div class="input-group mb-2 mr-sm-2">
+    
+    <input type="text"  name="clientID"  disabled value="{{redirectUri.clientID}}" [(ngModel)]="redirectUri.clientID" class="form-control" id="inlineFormInputName2" placeholder="Username">
+  </div>
+
+  <div class="form-check mb-2 mr-sm-2">
+    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+    <label class="form-check-label" for="inlineFormCheck">
+      Remember me
+    </label>
+  </div>
+  <input type="submit" value="Submit" class="btn btn-primary mb-2">
+
+</form>
+
+</div>
+
+</ng-template>
+<ng-template #elseBlock>
+  <form (ngSubmit)="processForm()">
+  
+    <label class="sr-only" for="inlineFormInputName2">id</label>
+    <input type="text"  disabled name="id" value="{{redirectUri.id}}"  [(ngModel)]="redirectUri.id" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+  
+    <label class="sr-only" for="inlineFormInputName2">Name</label>
+    <input type="text" name="redirectUri" value="{{redirectUri.redirectUri}}" [(ngModel)]="redirectUri.redirectUri"  class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+  
+    <label class="sr-only" for="inlineFormInputGroupUsername2">clientID</label>
+    <div class="input-group mb-2 mr-sm-2">
+      
+      <input type="text"  name="clientID"  disabled value="{{redirectUri.clientID}}" [(ngModel)]="redirectUri.clientID" class="form-control" id="inlineFormInputName2" placeholder="Username">
+    </div>
+  
+    <div class="form-check mb-2 mr-sm-2">
+      <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+      <label class="form-check-label" for="inlineFormCheck">
+        Remember me
+      </label>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary mb-2">
+  
+  </form>
+
+</ng-template>
+
+
+
+
+   
+</div>
+        
+
+
+<br>
+
+</div>
+<!-- Main container ends -->
+
+</div>
+<footer class="footer">
+<div class="container-fluid">
+<div class="row">
+    <div class="col-12 col-md text-center text-md-left align-self-center">
+        <p>All rights reserved by <a href="#">Maxartkiller</a></p>
+    </div>
+    <div class="col-12 col-md-auto text-center text-md-right">
+        <ul class="nav justify-content-center justify-md-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Terms of use</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Privacy Policy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contactus.html">Contact us</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</footer>
+
+</div>

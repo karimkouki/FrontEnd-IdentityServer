@@ -1,0 +1,98 @@
+<div class="wrapper"  >
+  <div class="content shadow-sm" >
+     
+
+      <!-- Main container starts -->
+      <div class="container main-container" id="main-container" >
+          <div class="jumbotron px-4 py-5 text-white rounded position-relative overflow-hidden mb-4 template-bg" >
+             
+ 
+
+
+            <div class="container h-100">
+              <div class="d-flex justify-content-center h-100">
+                <div class="searchbar">
+                  <input class="search_input" type="text" name="search" [(ngModel)]="searchText" placeholder="Search...">
+                  <button class="search_icon"><i class="fas fa-search">OK</i></button>
+                </div>
+              </div>
+            </div>
+
+
+
+<div class="row mt-5">
+ 
+
+
+
+  <table  class="table table-striped">
+    <thead>
+      <th>id</th>
+      <th>name</th>
+      <th>displayName</th>
+      <th>description</th>
+      
+      <th>Operations </th>
+  </thead>
+
+
+  <tbody>
+    <tr *ngFor="let user of events | filter:searchText">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.displayName}}</td>
+        <td>{{user.description}}</td>
+        
+        <td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+            <button class="btn btn-primary" (click)="updateUser(user)">Edit</button>
+            <button class="btn btn-info" (click)="ProfilUser(user)">Profil</button>
+            
+          </td>
+            
+
+    </tr>
+</tbody>
+
+    
+  </table>
+</div>
+
+
+
+
+
+   
+</div>
+        
+
+
+<br>
+
+</div>
+<!-- Main container ends -->
+
+</div>
+<footer class="footer">
+<div class="container-fluid">
+<div class="row">
+    <div class="col-12 col-md text-center text-md-left align-self-center">
+        <p>All rights reserved by <a href="#">Maxartkiller</a></p>
+    </div>
+    <div class="col-12 col-md-auto text-center text-md-right">
+        <ul class="nav justify-content-center justify-md-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Terms of use</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Privacy Policy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contactus.html">Contact us</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</footer>
+
+</div>

@@ -1,0 +1,57 @@
+
+<div class="wrapper"  >
+  <div class="content shadow-sm" >
+     
+
+      <!-- Main container starts -->
+      <div class="container main-container" id="main-container" >
+          <div class="jumbotron px-4 py-5 text-white rounded position-relative overflow-hidden mb-4 template-bg" >
+         
+
+
+<br>
+<div class="container">
+
+  <form (ngSubmit)="processForm()">
+      <div class="form group">
+
+        <label for="fname">full Name</label>
+
+          <input type="text" name="id" value="{{redirectUri.user.fullName}}"  class="form-control" [(ngModel)]="redirectUri.user.fullName">
+      </div>
+          <div class="form group">
+          <label for="fname">User Name</label>
+          <input type="text" name="fname" value="{{redirectUri.user.userName}}" class="form-control" [(ngModel)]="redirectUri.user.userName">
+      </div>
+      <div *ngFor="let role of redirectUri.roles | filter:searchText">
+  
+      <div class="form group">
+          <label for="lname">Role</label>
+          <input type="text" name="lname"  value="{{role.name}}" class="form-control" [(ngModel)]="role.name">
+      </div>
+
+
+
+
+    <div class="form-group row">
+      <div class="col-lg-6 col-md-6">
+          <div class="row">
+              <div class="col-lg-6">
+                  <label>Update Role</label>
+                  <select class="form-control "  name="roleName" [(ngModel)]="redirectUri.user.roleName" data-live-search="true" tabindex="-1" aria-hidden="true">
+                  
+                    <option *ngFor="let role1 of events "  value="{{role1.name}}">
+                      {{role1.name}}
+                    </option>
+                  </select>
+              </div>
+            
+          </div>
+      </div>
+      
+  </div>
+  <br>
+      <input type="submit" value="save" class="btn btn-success"> <i class="material-icons md-18"> </i>
+    </div>
+  </form>
+</div>

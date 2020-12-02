@@ -1,0 +1,148 @@
+<div class="wrapper"  >
+  <div class="content shadow-sm" >
+     
+
+      <!-- Main container starts -->
+      <div class="container main-container" id="main-container" >
+          <div class="jumbotron px-4 py-5 text-white rounded position-relative overflow-hidden mb-4 template-bg" >
+             
+ 
+
+
+
+
+<table class="table table-bordered table-striped border=1" >
+<thead>
+<td>
+  <tr>id</tr>
+  <tr>enabled</tr>
+  <tr>clientId</tr>
+  <tr>protocolType</tr>
+  <tr>clientSecrets</tr>
+  <tr>requireClientSecret</tr>
+  <tr>clientName</tr>
+  <tr>description</tr>
+  <tr>clientUri</tr>
+  <tr>logoUri</tr>
+  <tr>requireConsent</tr>
+  <tr>allowRememberConsent</tr>
+  <tr>alwaysIncludeUserClaimsInIdToken</tr>
+  <tr>allowedGrantTypes</tr>
+  <tr>requirePkce</tr>
+  <tr>allowPlainTextPkce</tr>
+  <tr>allowAccessTokensViaBrowser</tr>
+  <tr>redirectUris</tr>
+  <tr>postLogoutRedirectUris</tr>
+  <tr>frontChannelLogoutUri</tr>
+  <tr>frontChannelLogoutSessionRequired</tr>
+  <tr>backChannelLogoutUri</tr>
+  <tr>backChannelLogoutSessionRequired</tr>
+  <tr>allowOfflineAccess</tr>
+  <tr>allowedScopes</tr>
+  <tr>identityTokenLifetime</tr>
+  <tr>accessTokenLifetime</tr>
+  <tr>authorizationCodeLifetime</tr>
+  <tr>gconsentLifetimeddf</tr>
+  <tr>absoluteRefreshTokenLifetime</tr>
+  <tr>slidingRefreshTokenLifetime</tr>
+  <tr>refreshTokenUsage</tr>
+  <tr>updateAccessTokenClaimsOnRefresh</tr>
+  <tr>refreshTokenExpiration</tr>
+  <tr>accessTokenType</tr>
+  <tr>enableLocalLogin</tr>
+  <tr>identityProviderRestrictions</tr>
+  <tr>includeJwtId</tr>
+  <tr>claims</tr>
+  <tr>alwaysSendClientClaims</tr>
+  <tr>
+    
+  </tr>
+
+</td>
+<td>
+  
+  <tr>{{redirectUri.id}}</tr>
+  <tr>{{redirectUri.enabled}}</tr>
+  <tr>{{redirectUri.clientId}}</tr>
+  <tr>{{redirectUri.protocolType}}</tr>
+  <tr>
+  <ul *ngFor="let user of redirectUri.clientSecrets">
+    <li>{{user.id}}</li>
+    <li>{{user.value}}</li>
+    <li>{{user.description}}</li>
+    <li>{{user.type}}</li>
+  </ul></tr>
+  <tr>{{redirectUri.clientName}}</tr>
+  <tr>{{redirectUri.description}}</tr>
+  <tr>{{redirectUri.requireConsent}}</tr>
+  <tr>{{redirectUri.allowRememberConsent}}</tr>
+  <tr>{{redirectUri.alwaysIncludeUserClaimsInIdToken}}</tr>
+  <tr><ul *ngFor="let user of redirectUri.allowedGrantTypes">
+    <li>{{user.id}}</li>
+    <li>{{user.grantType}}</li>
+  
+  </ul></tr>
+  <tr>{{redirectUri.requirePkce}}</tr>
+  <tr>{{redirectUri.allowPlainTextPkce}}</tr>
+  <tr>{{redirectUri.allowAccessTokensViaBrowser}}</tr>
+  <tr><ul *ngFor="let user of redirectUri.redirectUris">
+    <li>{{user.id}}</li>
+    <li>{{user.redirectUri}}</li>
+  
+  </ul></tr>
+  <tr><ul *ngFor="let user of redirectUri.allowedScopes">
+    <li>{{user.id}}</li>
+    <li>{{user.scope}}</li>
+  
+  </ul></tr>
+  <tr><ul *ngFor="let user of redirectUri.allowedScopes">
+    <li>{{user.id}}</li>
+    <li>{{user.scope}}</li>
+  
+  </ul></tr>
+  <tr><ul *ngFor="let user of redirectUri.allowedScopes">
+    <li>{{user.id}}</li>
+    <li>{{user.scope}}</li>
+  
+  </ul></tr>
+  
+</td>
+</thead>
+
+</table>
+
+   
+</div>
+        
+
+
+<br>
+
+</div>
+<!-- Main container ends -->
+
+</div>
+<footer class="footer">
+<div class="container-fluid">
+<div class="row">
+    <div class="col-12 col-md text-center text-md-left align-self-center">
+        <p>All rights reserved by <a href="#">Maxartkiller</a></p>
+    </div>
+    <div class="col-12 col-md-auto text-center text-md-right">
+        <ul class="nav justify-content-center justify-md-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Terms of use</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Privacy Policy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contactus.html">Contact us</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</footer>
+
+</div>

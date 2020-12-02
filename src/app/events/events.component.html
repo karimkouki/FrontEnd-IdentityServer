@@ -1,0 +1,90 @@
+
+
+
+<div class="wrapper"  >
+  <div class="content shadow-sm" >
+     
+
+      <!-- Main container starts -->
+      <div class="container main-container" id="main-container" >
+          <div class="jumbotron px-4 py-5 text-white rounded position-relative overflow-hidden mb-4 template-bg" >
+             
+ 
+<div class="container h-100">
+  <div class="d-flex justify-content-center h-100">
+    <div class="searchbar">
+      <input class="search_input" type="text" name="search" [(ngModel)]="searchText" placeholder="Search...">
+      <button class="search_icon"><i class="fas fa-search">OK</i></button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <table  class="table table-striped">
+    <thead>
+
+          <th>Photo</th>
+
+      <th>User Name</th>
+      <th>full Name</th>
+      <th>Email</th>
+      
+      
+      <th>Operations </th>
+  </thead>
+
+
+  <tbody>
+
+    <tr *ngFor="let item of data|filter:searchText">
+
+   
+      
+      
+        <td>
+        
+                                          <img src="{{item[0].file}}" alt="profil" style="width:60px; height:60px;">
+
+        
+        </td>
+                <td>{{item[0].UserName}}</td>
+
+        <td>{{item[0].FullName}}</td>
+
+        <td>{{item[0].Email}}</td>
+
+     
+
+      
+       
+        
+        <td><button class="btn btn-danger" (click)="deleteUser(item[0])">Delete</button>
+            <button class="btn btn-primary" (click)="updateUser(item[0])">Edit</button>
+            <button class="btn btn-info" (click)="ProfilUser(item[0])">Profil</button>
+            
+          </td>
+            
+
+    </tr>
+</tbody>
+
+    
+  </table>
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+

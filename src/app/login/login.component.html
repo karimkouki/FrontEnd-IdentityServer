@@ -1,0 +1,224 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- /form card login
+
+<div class="loader container-fluid">
+  <div class="row h-100">
+      <div class="col-auto align-self-center  mx-auto text-center">
+          <div class="loader-ripple"><div></div><div></div></div>
+          <h2>AdminuxPRO</h2>
+          <p>HTML Template</p>
+      </div>
+  </div>
+</div>
+ -->
+
+<div class="wrapper">
+  <div class="content shadow-sm position-relative">
+      <header class="header">
+          <!-- Fixed navbar -->
+          <nav class="container-fluid">
+              <div class="row">
+                  <div class="col align-self-center">
+                      <a href="#" class="logo text-white">
+                          <img src="https://maxartkiller.com/website/AdminuxPRO/HTML/assets/img/logoicon.svg" alt="" class="logo-icon">
+                          <div class="logo-text">
+                            <h5 class="fs22 mb-0">IDENTITY <sup class="badge badge-danger">PRO</sup></h5>
+                            <p class="text-uppercase fs11">identity server</p>
+                        </div>
+                      </a>
+                  </div>
+                  <div class="col text-right align-self-center">
+                     
+                      <button type="button" (click)="register()" class="btn btn-sm btn-primary text-uppercase">Register </button>
+             
+                 
+                    </div>
+              </div>
+          </nav>
+      </header>
+      <div class="background opac blur">
+          <img src="../../assets/img/team.jpg" alt="">
+      </div>
+
+      <!-- Main container starts -->
+      <div class="container main-container" id="main-container">
+          <div class="row login-row-height">
+              <div class="col-12 col-md-6 col-lg-7 d-none d-md-flex"></div>
+              <div class="col-12 col-md-6 col-lg-5 col-xl-4  align-self-center">
+
+      
+
+                <form class="form">
+             
+
+
+
+                  <div class="card border-0 shadow-lg blur">
+                      <div class="card-body py-5">
+                          <h5 class="font-weight-light mb-1 text-mute-high">Welcome,</h5>
+                          <h3 class="font-weight-normal mb-4">Please Sign In</h3>
+                          <div class="card  mb-2 overflow-hidden">
+                              <div class="card-body p-0">
+                                  <label for="inputEmail" class="sr-only">Email address</label>
+                                  <input type="text" id="inputEmail" class="form-control rounded-0 border-0" [(ngModel)]="loginUserData.Username" name="Username" required="">
+                  
+                                  
+                                  <hr class="my-0">
+                                  <label for="inputPassword" class="sr-only">Password</label>
+                                
+                                  <input type="password"  id="inputPassword" class="form-control rounded-0 border-0" [(ngModel)]="loginUserData.password" name="Password" required>
+                 
+                             
+                                </div>
+                          </div>
+                          <div class="my-3 row">
+                              <div class="col-12 col-md py-1">
+                                  <div class="custom-control custom-checkbox">
+                                      <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
+                                      <label class="custom-control-label" for="customCheck1">Remember Me</label>
+                                  </div>
+                              </div>
+                              <div class="col-12 col-md py-1 text-left text-md-right">
+                                  <a href="resetpassword.html" class="template-primary">Forgot Password?</a>
+                              </div>
+                          </div>
+                          <div class="mb-4">
+                       
+                              <button type="button" (click)="loginUser()" class=" btn btn-primary btn-block">Sign In <i class="material-icons md-18">arrow_forward</i></button>
+              
+                        
+                            </div>
+                          <div class="">
+                              <p class="text-mute">
+                                  Do not have account yet?<br>
+                                  Please <a [routerLink]=""(click)="register()"  class="text-template-primary-light">Sign up</a>
+                      
+                                  
+                                  here.
+                              </p>
+                          </div>
+                      </div>
+                    
+                  </div>
+
+                </form>
+              </div>
+          </div>
+      </div>
+      <!-- Main container ends -->
+  </div>
+  <footer class="footer">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-12 col-md text-center text-md-left align-self-center">
+                  <p>All rights reserved by <a href="#">Maxartkiller</a></p>
+              </div>
+              <div class="col-12 col-md-auto text-center text-md-right">
+                  <ul class="nav justify-content-center justify-md-content-end">
+                      <li class="nav-item">
+                          <a class="nav-link active" href="#">Terms of use</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Privacy Policy</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="contactus.html">Contact us</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+</div>
+<!-- wrapper ends -->
+
+
+<!-- Global js mandatory -->
+<script src="../../assets/js/jquery-3.3.1.min.js"></script>
+<script src="../../assets/js/popper.min.js"></script>
+<script src="../../assets/vendor/bootstrap/js/bootstrap.min.js"></script><script src="../../assets/vendor/cookie/jquery.cookie.js"></script>
+<!-- Global js ends -->
+
+<!-- Vendor or 3rd party js -->
+
+<!-- date range picker -->
+<script src="../../assets/vendor/daterangepicker-master/moment.min.js"></script>
+<script src="../../assets/vendor/daterangepicker-master/daterangepicker.js"></script>
+<!-- Vendor or 3rd party js ends -->
+
+<!-- Customized template js mandatory -->
+<script src="../../assets/js/main.js"></script>
+<!-- Customized template js ends -->
+
+<!-- theme picker -->
+<script src="../../assets/js/style-picker.js"></script>
+<!-- theme picker ends -->
+
+<!-- Customized page level js -->
+<script>
+  'use strict'
+  $(document).ready(function() {
+
+  });
+
+</script>
+<!-- Customized page level js ends -->
+
+
+
+<div *ngIf="err; else elseBlock">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

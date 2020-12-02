@@ -1,0 +1,60 @@
+<div class="wrapper"  >
+  <div class="content shadow-sm" >
+     
+
+      <!-- Main container starts -->
+      <div class="container main-container" id="main-container" >
+          <div class="jumbotron px-4 py-5 text-white rounded position-relative overflow-hidden mb-4 template-bg" >
+             
+ 
+
+
+<div class="py-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <span class="anchor" id="formLogin"></span>
+
+      <!-- form card login -->
+      <div class="card rounded-0">
+        <div class="card-header">
+          <h3 class="mb-0">Register Identity Claims</h3>
+        </div>
+        <div class="card-body">
+          <form class="form">
+            <div class="form-group">
+              <label for="uname1">identityResourceId</label>
+              <input type="text" [(ngModel)]="user.UserName" name="UserName" class="form-control rounded-0" required>
+            </div>
+
+
+
+
+            <div class="form-group">
+              <label for="uname1">type</label>
+              <input type="text" [(ngModel)]="user.FullName" name="FullName" class="form-control rounded-0" required>
+            </div>
+
+
+
+        
+
+
+
+            
+
+
+
+
+
+            <button type="button" (click)="registerUser()" class="btn btn-primary float-right">Register</button>
+          </form>
+        </div>
+        <!--/card-block-->
+      </div>
+      <!-- /form card login -->
+
+    </div>
+
+
+  </div>
+</div>

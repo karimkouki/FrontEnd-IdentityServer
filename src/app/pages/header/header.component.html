@@ -1,0 +1,181 @@
+
+
+
+
+
+
+<nav *ngIf="_authService.loggedIn()"> 
+    <!-- Sidebar starts -->
+    <div class="sidebar">
+     <!-- Logo sidebar -->
+     <a href="#" class="logo">
+         <img src="https://maxartkiller.com/website/AdminuxPRO/HTML/assets/img/logoicon.svg" alt="" class="logo-icon">
+         <div class="logo-text">
+             <h5 class="fs22 mb-0">IDENTITY <sup class="badge badge-danger">PRO</sup></h5>
+             <p class="text-uppercase fs11">identity server</p>
+         </div>
+     </a>
+     <!-- Logo sidebar ends -->
+   
+     <!-- Navigation menu sidebar-->
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+     
+     <h6 class="subtitle fs11">User Management</h6>
+     
+   
+   
+   
+     <ul class="nav flex-column">
+         <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" *ngIf="_authService.loggedIn()"  routerLink="/Profile" ><i class="material-icons icon">dashboard</i><span>Your profile</span> </a>
+             
+         </li>
+         <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" routerLink="/events"  ><i class="material-icons icon">filter_none</i><span>Members</span> </a>
+           
+       </li>
+       <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" routerLink="/UserRole" ><i class="material-icons icon">border_all</i><span>Users & Role</span> </a>
+           
+       </li>
+       <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" routerLink="/Role" ><i class="material-icons icon">Tables</i><span>Role</span> </a>
+           
+       </li>
+      
+     </ul>
+     <h6 class="subtitle fs11">Clients management</h6>
+   
+   
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+     
+     <ul class="nav flex-column">
+   
+   
+   
+      
+   
+   
+       <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" routerLink="/ClientList" ><i class="material-icons icon">games</i><span>Clients List</span> </a>
+           
+       </li>
+       <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" routerLink="/ClientForm" ><i class="material-icons icon">filter_none</i><span>Add Clients
+           </span> </a>
+           
+       </li>
+     
+   
+   
+   
+        
+     </ul>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+     
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+     
+   
+     <h6 class="subtitle fs11">Api Resources management</h6>
+     <ul class="nav flex-column">
+   
+       <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" routerLink="/ApiResource" ><i class="material-icons icon">style</i><span>ApiResource
+           </span> </a>
+           
+       </li>
+   
+   
+      
+       
+     </ul>
+     <h6 class="subtitle fs11">Api Resources management</h6>
+     <ul class="nav flex-column">
+   
+       <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" routerLink="/Identity" ><i class="material-icons icon">favorite</i><span>Identity List
+           </span> </a>
+           
+       </li>
+       <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" routerLink="/IdentityClaims" ><i class="material-icons icon">settings_applications</i><span>Identity Claims List
+           </span> </a>
+           
+       </li>
+   
+         
+     </ul>
+    
+    
+    
+   
+     <!-- Navigation menu sidebar ends -->
+     <br>
+     <!-- Upgrade notification -->
+   
+     <!-- Upgrade notification ends -->
+   
+     <!-- Setting link -->
+   
+     <!-- Setting link -->
+   </div>
+   <!-- Sidebar ends -->
+   </nav>
+   
+   

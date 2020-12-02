@@ -1,0 +1,170 @@
+<div class="wrapper"  >
+  <div class="content shadow-sm" >
+     
+
+      <!-- Main container starts -->
+      <div class="container main-container" id="main-container" >
+          <div class="jumbotron px-4 py-5 text-white rounded position-relative overflow-hidden mb-4 template-bg" >
+             
+ 
+
+
+
+
+
+            <div class="container h-100">
+              <div class="d-flex justify-content-center h-100">
+                <div class="searchbar">
+                  <input class="search_input" type="text" name="search" [(ngModel)]="searchText" placeholder="Search...">
+                  <button class="search_icon"><i class="fas fa-search">OK</i></button>
+                </div>
+              </div>
+            </div>
+            
+<br>
+
+  <table  class="table table-striped">
+    <thead>
+ 
+      <th>Name</th>
+      <th>DisplayName</th>
+      <th>Enabled</th>
+      <th>Api Secrets Value & Type</th>
+      <th>Scopes Value & Type</th>
+      
+      
+
+      <th>op </th>
+  </thead>
+
+
+  <tbody>
+    <tr *ngFor="let user of events.apiResources| filter:searchText">
+        
+      <td>{{user.name}}</td>
+       
+        <td>{{user.displayName}}</td>
+        <td>{{user.enabled}}</td>
+      <td>  <div *ngFor="let user1 of user.apiSecrets">
+         <div><td>{{user1.value}}</td>
+         </div> 
+         <div><td>{{user1.type}}</td>
+         </div>
+        </div>
+      </td>
+<td>
+        <div *ngFor="let user1 of user.scopes">
+          <div><td>{{user1.name}}</td>
+          </div> 
+          <div><td>{{user1.displayName}}</td>
+          </div>
+         </div></td>
+        <td>
+            <button class="btn btn-primary" (click)=AddApiScopes(user)>Add Api Scopes</button>
+            <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+          </td>
+            
+
+    </tr>
+</tbody>
+
+    
+  </table>
+
+
+
+
+
+
+
+   
+</div>
+
+
+
+
+
+<button (click)="show = !show" class="btn btn-success" >{{show ? 'Add ressource' : 'Cancel'}}</button>
+
+<br>
+<div *ngIf="show; else elseBlock">
+
+
+
+
+
+
+
+
+
+  
+</div>
+<ng-template #elseBlock>
+
+
+
+
+
+
+
+  <form (ngSubmit)="processForm()">
+  <label class="sr-only" for="inlineFormInputName2">name</label>
+  <input type="text" value="{{role.name}}"  [(ngModel)]="role.name" name="name" class="form-control mb-2 mr-sm-2" id="name" placeholder=" Name">
+
+  <label class="sr-only" for="inlineFormInputName2">display Name</label>
+  <input type="text" value="{{role.displayName}}" [(ngModel)]="role.displayName" name="displayName"   class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder=" display Name">
+
+
+
+  <div class="form-check mb-2 mr-sm-2">
+    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+    <label class="form-check-label" for="inlineFormCheck">
+      Remember me
+    </label>
+  </div>
+
+
+  <input type="submit" value="save" class="btn btn-primary mb-2" >
+
+
+ 
+
+
+</form>
+
+
+
+</ng-template>
+        
+
+
+<br>
+
+</div>
+<!-- Main container ends -->
+
+</div>
+<footer class="footer">
+<div class="container-fluid">
+<div class="row">
+    <div class="col-12 col-md text-center text-md-left align-self-center">
+        <p>All rights reserved by <a href="#">Maxartkiller</a></p>
+    </div>
+    <div class="col-12 col-md-auto text-center text-md-right">
+        <ul class="nav justify-content-center justify-md-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Terms of use</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Privacy Policy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contactus.html">Contact us</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</footer>
+
+</div>

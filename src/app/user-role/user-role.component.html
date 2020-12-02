@@ -1,0 +1,59 @@
+<div class="wrapper"  >
+  <div class="content shadow-sm" >
+     
+
+      <!-- Main container starts -->
+      <div class="container main-container" id="main-container" >
+          <div class="jumbotron px-4 py-5 text-white rounded position-relative overflow-hidden mb-4 template-bg" >
+             
+ 
+<br>
+
+<div class="container h-100">
+  <div class="d-flex justify-content-center h-100">
+    <div class="searchbar">
+      <input class="search_input" type="text" name="search" [(ngModel)]="searchText" placeholder="Search...">
+      <button class="search_icon"><i class="fas fa-search">OK</i></button>
+    </div>
+  </div>
+</div>
+
+
+<div class="row mt-5">
+
+  
+
+  
+
+  <table  class="table table-striped">
+    <thead>
+      <th>user Name</th>
+      <th>full Name</th>
+      <th>email</th>
+      <th>user Roles</th>
+      
+      <th>Operations </th>
+  </thead>
+
+
+  <tbody>
+    <tr *ngFor="let user of events | filter:searchText">
+      <td>{{user.user.userName}}</td>
+        <td>{{user.user.fullName}}</td>
+        <td>{{user.user.email}}</td>
+        <td>{{user.roles[0].name}}</td>
+        
+        
+        
+        <td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+            <button class="btn btn-primary" (click)="updateUser(user)">Edit</button>
+            
+          </td>
+            
+
+    </tr>
+</tbody>
+
+    
+  </table>
+</div>
